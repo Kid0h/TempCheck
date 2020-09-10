@@ -1,10 +1,7 @@
 import colorama
 from colorama import Fore
 from colorama import Style
-import subprocess
 import time
-import os
-import sys
 
 delay = int(input("Set the delay between each check: "))
 Temp = int(input("Set the tempreture which you want to be notified at: "))
@@ -28,7 +25,5 @@ while True:
     else:
         print(Fore.GREEN + str( cpu_temp) + Style.RESET_ALL)
         f.write("\n"+str(cpu_temp)+" (Normal)")
-    #if cpu_temp >= 39:
-        #os.system("sh close.sh")
     f.close()
     time.sleep(delay)
